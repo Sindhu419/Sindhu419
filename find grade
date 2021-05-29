@@ -1,0 +1,32 @@
+#include<stdio.h>
+char findgrade(int score)
+{
+if(score<0||score>100){
+return '\0';
+}
+if(score>=90&&score<=100)
+return 'A';
+else if(score>=80)
+return 'B';
+else if(score>=70)
+return 'C';
+else if(score>=60)
+return 'D';
+else if(score>=50)
+return 'E';
+else
+return 'F';
+}
+int main()
+{
+int score;
+char grade;
+printf("enter score(0-100): ")
+scanf("%d",&score);
+grade=findgrade(score);
+if(grade=='\0')
+printf("invalid score");
+else
+printf("grade: %c\n",grade)
+return 0;
+}
